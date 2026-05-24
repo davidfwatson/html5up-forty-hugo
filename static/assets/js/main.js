@@ -164,7 +164,16 @@
 
 							}
 
-						// Otherwise ...
+						// On-page anchor? Smooth-scroll to it instead of the page-exit
+							// transition (which fades the wrapper out; that animation
+							// is only meant for navigating to a separate page).
+								else if (href && href.charAt(0) == '#' && $(href).length > 0) {
+
+									$('html, body').animate({ scrollTop: $(href).offset().top }, 500);
+
+								}
+
+							// Otherwise ...
 							else {
 
 								// Start transitioning.
