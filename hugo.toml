@@ -4,6 +4,8 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
 title = "Forty by HTML5 UP"
+# Single-page design — no taxonomies.
+disableKinds = ["taxonomy", "term"]
 
 [params]
   locale = "en"
@@ -14,6 +16,3 @@ title = "Forty by HTML5 UP"
 
 [outputs]
   home = ["HTML"]
-
-# Single-page design — no taxonomies.
-disableKinds = ["taxonomy", "term"]
