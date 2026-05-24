@@ -1,0 +1,20 @@
+{{ $locale := .Site.Params.locale | default "en" }}
+{{ $a := (index .Site.Data.sitetext $locale).about }}
+{{ $img := $a.image }}
+{{ if and $img (not (or (hasPrefix $img "/") (hasPrefix $img "http"))) }}{{ $img = $img | relURL }}{{ end }}
+
+<!-- Two: About -->
+	<section id="two">
+		<div class="inner">
+			{{ with $img }}<img class="candidate-photo" src="{{ . }}" alt="{{ $a.title }}" />{{ end }}
+			<header class="major">
+				<h2>{{ $a.title }}</h2>
+			</header>
+			{{ with $a.body }}<p>{{ . | markdownify }}</p>{{ end }}
+			{{ with $a.cta }}
+			<ul class="actions">
+				<li><a href="{{ .url }}" class="button next">{{ .label }}</a></li>
+			</ul>
+			{{ end }}
+		</div>
+	</section>

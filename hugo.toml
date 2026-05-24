@@ -1,0 +1,19 @@
+# Demo config — only used when running this theme standalone
+# (`hugo server` from inside the theme dir). Consuming sites supply
+# their own hugo.toml and `theme = "html5up-forty-hugo"`.
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Forty by HTML5 UP"
+
+[params]
+  locale = "en"
+  description = "A Hugo port of the HTML5 UP Forty template."
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML"]
+
+# Single-page design — no taxonomies.
+disableKinds = ["taxonomy", "term"]

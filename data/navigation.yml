@@ -1,0 +1,19 @@
+# Off-canvas (#menu) links. Anchors target the on-page sections.
+en:
+  menu:
+    - title: "Home"
+      url: "#banner"
+    - title: "Tiles"
+      url: "#one"
+    - title: "About"
+      url: "#two"
+    - title: "Contact"
+      url: "#contact"
+  # Buttons shown under the menu links.
+  actions:
+    - title: "Get in touch"
+      url: "#contact"
+      class: "button primary fit"
+    - title: "See the Tiles"
+      url: "#one"
+      class: "button fit"

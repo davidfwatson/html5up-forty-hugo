@@ -1,0 +1,19 @@
+{{ $locale := .Site.Params.locale | default "en" }}
+{{ $t := index .Site.Data.sitetext $locale }}
+{{ $f := $t.footer }}
+{{ $email := $t.contact.email }}
+
+<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			{{ with $email }}
+			<ul class="icons">
+				<li><a href="mailto:{{ . }}" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			{{ end }}
+			<ul class="copyright">
+				{{ with $f.copyright }}<li>{{ . | safeHTML }}</li>{{ end }}
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP (html5up.net | @ajlkn)
+	Free for commercial use under the CC BY 3.0 license (html5up.net/license).
+	Hugo port: github.com/davidfwatson/html5up-forty-hugo
+-->
+<html lang="{{ substr .Site.LanguageCode 0 2 | default "en" }}">
+	{{ partial "head.html" . }}
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				{{ block "main" . }}{{ end }}
+			</div>
+
+		<!-- Consuming-site hook (floating widgets, etc.). -->
+			{{ partial "body-end.html" . }}
+
+		<!-- Scripts -->
+			<script src="{{ "assets/js/jquery.min.js" | relURL }}"></script>
+			<script src="{{ "assets/js/jquery.scrolly.min.js" | relURL }}"></script>
+			<script src="{{ "assets/js/jquery.scrollex.min.js" | relURL }}"></script>
+			<script src="{{ "assets/js/browser.min.js" | relURL }}"></script>
+			<script src="{{ "assets/js/breakpoints.min.js" | relURL }}"></script>
+			<script src="{{ "assets/js/util.js" | relURL }}"></script>
+			<script src="{{ "assets/js/main.js" | relURL }}"></script>
+
+	</body>
+</html>

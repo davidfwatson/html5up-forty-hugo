@@ -1,0 +1,13 @@
+{{ define "main" }}
+	{{ partial "header.html" . }}
+	{{ partial "banner.html" . }}
+
+	<!-- Main -->
+		<div id="main">
+			{{ partial "tiles.html" . }}
+			{{ partial "about.html" . }}
+		</div>
+
+	{{ partial "contact.html" . }}
+	{{ partial "footer.html" . }}
+{{ end }}

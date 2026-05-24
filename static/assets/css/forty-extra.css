@@ -1,0 +1,12 @@
+/* Small additions layered over the stock Forty CSS that ship with the
+   Hugo port. The about-section photo renders as a centered round avatar
+   when data.about.image is set. */
+.candidate-photo {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 5px solid rgba(255, 255, 255, 0.9);
+	margin: 0 0 1.5em 0;
+	box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.5);
+}

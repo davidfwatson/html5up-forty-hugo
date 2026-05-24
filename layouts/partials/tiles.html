@@ -1,0 +1,19 @@
+{{ $locale := .Site.Params.locale | default "en" }}
+{{ $tiles := (index .Site.Data.sitetext $locale).tiles }}
+
+<!-- One: Tiles -->
+	<section id="one" class="tiles">
+		{{- range $tiles }}
+		{{- $img := .image -}}
+		{{- if not (or (hasPrefix $img "/") (hasPrefix $img "http")) }}{{ $img = $img | relURL }}{{ end }}
+		<article>
+			<span class="image">
+				<img src="{{ $img }}" alt="" />
+			</span>
+			<header class="major">
+				<h3><a href="{{ .url | default "#" }}" class="link">{{ .title }}</a></h3>
+				{{ with .text }}<p>{{ . }}</p>{{ end }}
+			</header>
+		</article>
+		{{- end }}
+	</section>

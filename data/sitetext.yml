@@ -1,0 +1,61 @@
+# Demo content for the standalone theme. A consuming site overrides this
+# by placing its own data/sitetext.yml (Hugo merges, site wins per key).
+en:
+  brand:
+    name: "Forty"
+    suffix: "by HTML5 UP"
+
+  banner:
+    title: "Forty"
+    suffix: "by HTML5 UP"
+    tagline: "Just another fine responsive site template<br />freely given under the CC BY 3.0 license."
+    cta:
+      label: "See the Tiles"
+      url: "#one"
+
+  tiles:
+    - title: "Aliquam"
+      text: "Ipsum dolor sit amet, consectetur adipiscing elit nullam."
+      image: "images/pic01.jpg"
+      url: "#two"
+    - title: "Tempus"
+      text: "Feugiat accumsan in a at massa egestas sed et lorem ipsum."
+      image: "images/pic02.jpg"
+      url: "#two"
+    - title: "Magna"
+      text: "Etiam, accumsan in a at massa egestas sed et lorem ipsum."
+      image: "images/pic03.jpg"
+      url: "#two"
+    - title: "Ipsum"
+      text: "Nascetur, accumsan in a at massa egestas sed et lorem ipsum."
+      image: "images/pic04.jpg"
+      url: "#two"
+    - title: "Consequat"
+      text: "Ridiculus, accumsan in a at massa egestas sed et lorem ipsum."
+      image: "images/pic05.jpg"
+      url: "#two"
+    - title: "Etiam"
+      text: "Penatibus, accumsan in a at massa egestas sed et lorem ipsum."
+      image: "images/pic06.jpg"
+      url: "#two"
+
+  about:
+    image: "images/pic09.jpg"
+    title: "Massa libero"
+    body: >
+      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero.
+      Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque
+      condimentum sem. In efficitur ligula tate urna.
+    cta:
+      label: "Learn More"
+      url: "#contact"
+
+  contact:
+    title: "Get in touch"
+    intro: "Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc."
+    showForm: true
+    email: "information@untitled.tld"
+    location: "Untitled, CA, USA"
+
+  footer:
+    copyright: "&copy; Untitled"

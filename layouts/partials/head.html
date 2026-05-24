@@ -1,0 +1,16 @@
+<head>
+	<title>{{ .Title | default .Site.Title }}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+
+	{{/* Hook: emitted BEFORE the stylesheet (pre-paint theme/palette script). */}}
+	{{ partial "head-top.html" . }}
+
+	<link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}" />
+	<link rel="stylesheet" href="{{ "assets/css/forty-extra.css" | relURL }}" />
+	<noscript><link rel="stylesheet" href="{{ "assets/css/noscript.css" | relURL }}" /></noscript>
+
+	{{/* Hook: emitted AFTER the stylesheet (style overrides). */}}
+	{{ partial "head-extra.html" . }}
+</head>

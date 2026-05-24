@@ -1,0 +1,16 @@
+name = "Forty"
+license = "CC-BY-3.0"
+licenselink = "https://github.com/davidfwatson/html5up-forty-hugo/blob/main/LICENSE"
+description = "Hugo port of the HTML5 UP 'Forty' one-page template. Data-driven (banner, tiles, about, contact), precompiled CSS, no build step required."
+homepage = "https://github.com/davidfwatson/html5up-forty-hugo"
+tags = ["one-page", "forty", "html5up", "landing", "portfolio"]
+features = ["responsive", "data-driven", "i18n-ready"]
+min_version = "0.128.0"
+
+[author]
+  name = "ported by David Watson"
+
+[original]
+  name = "AJ (@ajlkn) for HTML5 UP"
+  homepage = "https://html5up.net/forty"
+  repo = "https://html5up.net"

@@ -1,0 +1,28 @@
+{{ $locale := .Site.Params.locale | default "en" }}
+{{ $t := index .Site.Data.sitetext $locale }}
+{{ $nav := index .Site.Data.navigation $locale }}
+{{ $brand := $t.brand }}
+
+<!-- Header -->
+	<header id="header" class="alt">
+		<a href="{{ "" | relURL }}" class="logo"><strong>{{ $brand.name }}</strong> <span>{{ $brand.suffix }}</span></a>
+		<nav>
+			<a href="#menu">Menu</a>
+		</nav>
+	</header>
+
+<!-- Menu -->
+	<nav id="menu">
+		<ul class="links">
+			{{- range $nav.menu }}
+			<li><a href="{{ .url }}">{{ .title }}</a></li>
+			{{- end }}
+		</ul>
+		{{- with $nav.actions }}
+		<ul class="actions stacked">
+			{{- range . }}
+			<li><a href="{{ .url }}" class="{{ .class | default "button fit" }}">{{ .title }}</a></li>
+			{{- end }}
+		</ul>
+		{{- end }}
+	</nav>

@@ -1,0 +1,19 @@
+{{ $locale := .Site.Params.locale | default "en" }}
+{{ $b := (index .Site.Data.sitetext $locale).banner }}
+
+<!-- Banner -->
+	<section id="banner" class="major">
+		<div class="inner">
+			<header class="major">
+				<h1>{{ $b.title }}{{ with $b.suffix }}<br />{{ . }}{{ end }}</h1>
+			</header>
+			<div class="content">
+				{{ with $b.tagline }}<p>{{ . | safeHTML }}</p>{{ end }}
+				{{ with $b.cta }}
+				<ul class="actions">
+					<li><a href="{{ .url }}" class="button next scrolly">{{ .label }}</a></li>
+				</ul>
+				{{ end }}
+			</div>
+		</div>
+	</section>
